@@ -5,15 +5,18 @@ import { COLORS } from '../../constants';
 import VisuallyHidden from '../VisuallyHidden';
 
 const WIDTH  = 370;
-const SIZES = {
+const STYLES = {
   small: css`
     height: 8px;
+    border-radius: 4px;
   `,
   medium: css`
     height: 12px;
+    border-radius: 4px;
   `,
   large: css`
     height: 24px;
+    border-radius: 8px;
     padding: 4px;
   `,
 };
@@ -28,7 +31,7 @@ const ProgressBar = ({ value, size }) => {
 };
 
 const Wrapper = styled.div`
-  ${({ size }) => SIZES[size]};
+  ${({ size }) => STYLES[size]};
   width: ${WIDTH}px;
   background-color: ${COLORS.transparentGray15};
   box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
